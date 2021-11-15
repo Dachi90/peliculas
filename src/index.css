@@ -21,7 +21,7 @@ img {
 }
 
 .card {
-  background-color: #e6e6e6;
+  background-color: #f2f2f2;
   transition: all 0.5s ease-in-out;
 }
 
@@ -30,11 +30,14 @@ img {
 }
 
 .header {
-  border: 1px solid black;
-  display: flex;
+  background-color: #e6e6e6;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
-  justify-content: space-between;
-  height: 10%;
+}
+
+.logo {
+  margin-left: 1rem;
 }
 
 .mainContentBox {
@@ -60,4 +63,12 @@ img {
 .movieTitle {
   text-align: center;
   margin: 0;
+}
+
+.searchBar {
+  text-align: end;
+  margin-right: 1rem;
+}
+
+.searchInput {
 }
