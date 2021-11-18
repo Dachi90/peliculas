@@ -1,31 +1,26 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import MainContent from "./components/MainContent";
-import { URL_BASE, API_KEY, LANGUAGE } from "./helpers/keys";
+import { API_KEY, LANGUAGE, TRENDING, URL_BASE } from "./helpers/urls";
 
 function App() {
-  const [searchState, setSearchState] = useState("");
+  const [movies, setMovies] = useState([]);
+
+  const trendingURL = `${URL_BASE}${TRENDING}${API_KEY}${LANGUAGE}`;
 
   useEffect(() => {
-    const url = `${URL_BASE}search/movie${API_KEY}${LANGUAGE}&query=el club de la lucha`;
-
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url);
-        const json = await response.json();
-        console.log(json.results);
-        setSearchState(json.results);
-      } catch (error) {
-        console.log("error", error);
-      }
-    };
-    fetchData();
+    fetch(trendingURL)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setMovies(data.results);
+      });
   }, []);
 
   return (
     <div className="appClass">
       <Header />
-      <MainContent searchState={searchState} />
+      <MainContent data={movies} />
     </div>
   );
 }

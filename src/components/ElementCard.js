@@ -1,10 +1,14 @@
-const ElementCard = () => {
+import { POSTER_PATH } from "../helpers/urls";
+
+const ElementCard = ({ movie }) => {
+  console.log(movie);
+
   return (
     <div className="card">
-      <img src="https://image.tmdb.org/t/p/original/a26cQPRhJPX6GbWfQbvZdrrp9j9.jpg" alt="pelicula/serie" />
+      <img src={`${POSTER_PATH}${movie.poster_path}`} alt="pelicula/serie" />
       <div className="movieDetails">
-        <h3 className="movieTitle">Película 1</h3>
-        <button className="movieButton">Ver más</button>
+        <h3 className="movieTitle">{movie.title}</h3>
+        <p className="movieRate">{movie.vote_average}</p>
       </div>
     </div>
   );

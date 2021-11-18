@@ -15,7 +15,7 @@ img {
 }
 
 .appClass {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -26,7 +26,7 @@ img {
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .header {
@@ -57,11 +57,12 @@ img {
   text-align: center;
 }
 
-.movieButton {
+.movieTitle {
+  margin: 0;
 }
 
-.movieTitle {
-  text-align: center;
+.movieRate {
+  border: 1px solid black;
   margin: 0;
 }
 
