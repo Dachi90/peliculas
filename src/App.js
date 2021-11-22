@@ -12,10 +12,10 @@ function App() {
     fetch(trendingURL)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        //console.log(data);
         setMovies(data.results);
       });
-  }, []);
+  });
 
   return (
     <div className="appClass">
