@@ -12,6 +12,11 @@ const ElementCard = ({ movie }) => {
           {movie.vote_average}
         </p>
       </div>
+
+      <div className="movie-over">
+        <h2>Overview:</h2>
+        <p>{movie.overview}</p>
+      </div>
     </div>
   );
 };

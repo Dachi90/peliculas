@@ -5,7 +5,7 @@ body {
 
 img {
   max-width: 100%;
-  height: 90%;
+  height: auto;
 }
 
 *,
@@ -25,8 +25,8 @@ img {
 .card {
   background-color: #132226;
   box-shadow: 3px 3px rgba(19, 34, 38, 0.25);
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 
 .header {
@@ -59,6 +59,23 @@ img {
   align-items: center;
 }
 
+.movie-over {
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: black;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  max-height: 100%;
+}
+
+.card:hover .movie-over {
+  transform: translateY(0%);
+}
+
 .movieTitle {
   margin: 0;
 }
@@ -73,18 +90,24 @@ img {
 
 .searchBar {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center;
 }
 
 .searchInput {
-  width: 80%;
-  padding: 0.25rem;
+  width: 60%;
+  padding: 0.5rem;
   outline: none;
   border-radius: 5px;
+  margin-right: 0.5rem;
+  background-color: #21363c;
+  border: 1px white solid;
+  color: white;
 }
 
 .searchBar button {
-  padding: 0.2rem;
+  padding: 0.5rem;
   border-radius: 5px;
+  background-color: #21363c;
+  color: white;
+  border: 1px solid white;
 }
