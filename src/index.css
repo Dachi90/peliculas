@@ -7,6 +7,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+form {
+  width: 40%;
+}
 
 *,
 *:before,
@@ -94,11 +97,11 @@ img {
 }
 
 .searchInput {
-  width: 40%;
+  width: 90%;
   padding: 0.4rem;
   outline: none;
   border-radius: 5px;
-  margin-right: 0.5rem;
+
   background-color: #21363c;
   border: 1px white solid;
   color: white;
