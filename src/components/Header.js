@@ -8,10 +8,7 @@ const Header = ({ userSearch }) => {
         <span>TMDb</span>
       </div>
 
-      <div className="searchBar">
-        <input type="search" name="search" className="searchInput" id="search" placeholder="Película..." />
-        <button onClick={userSearch}>Buscar</button>
-      </div>
+      <input type="search" name="search" className="searchInput" id="search" placeholder="Película..." />
     </div>
   );
 };
